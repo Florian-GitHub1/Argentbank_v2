@@ -1,0 +1,17 @@
+footer {
+	background-color: var(--bg-accent-color);
+	padding: calc(var(--pad-desk) / 1.5) 0px;
+	font-family: 'OpenSauceL', sans-serif;
+	font-size: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	.footer-text {
+		display: flex;
+		span {
+			display: flex;
+			align-items: center;
+			margin: 0 8px 0 8px;
+		}
+	}
+}

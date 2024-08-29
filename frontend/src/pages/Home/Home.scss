@@ -1,0 +1,147 @@
+main {
+	width: 100%;
+	position: relative;
+	.hero {
+		position: relative;
+		background-image: url(../../assets//argentbank-cardL.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 800px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@media (max-width: 800px) {
+			height: 600px;
+		}
+		@media (max-width: 425px) {
+			height: 425px;
+		}
+		@media (max-width: 340px) {
+			height: 340px;
+		}
+		&-content {
+			position: relative;
+			color: var(--text-color);
+			@media (max-width: 800px) {
+				margin-left: var(--pad-mob);
+			}
+
+			.subtitle {
+				font-family: 'LexendVar', sans-serif;
+				font-size: clamp(1rem, 0.4853rem + 2.0956vw, 3rem);
+				font-weight: 500;
+				.green {
+					color: var(--accent-color);
+				}
+			}
+			.text {
+				font-family: 'LexendVar', sans-serif;
+				font-size: clamp(1rem, 0.4853rem + 2.0956vw, 3rem);
+				font-weight: 300;
+				margin-top: 50px;
+				.medium {
+					font-weight: 500;
+				}
+			}
+		}
+		.features {
+			position: absolute;
+			bottom: -40px;
+			@media (max-width: 1000px) {
+				margin: 0 var(--pad-desk);
+			}
+			@media (max-width: 800px) {
+				bottom: -35px;
+				margin: 0 var(--pad-desk);
+			}
+			@media (max-width: 425px) {
+				margin: 0 var(--pad-mob);
+			}
+			@media (max-width: 340px) {
+			}
+			&-block {
+				background-color: var(--bg-color);
+				display: grid;
+				grid-template-columns: repeat(5, auto);
+				align-items: center;
+				height: 80px;
+				border-radius: 6px;
+				box-shadow: 0px 4px 20px rgb(7 9 13 / 15%);
+				@media (max-width: 800px) {
+					height: 70px;
+				}
+				.vertical-separation {
+					width: 1px;
+					height: 40px;
+					background-color: var(--bg-blur);
+					margin: 0 40px 0 40px;
+					border-radius: 50px;
+					@media (max-width: 800px) {
+						margin: 0 20px 0 20px;
+					}
+					@media (max-width: 425px) {
+						margin: 0 12px 0 12px;
+					}
+				}
+				.feature-item {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					&-svg {
+						@media (max-width: 800px) {
+							stroke-width: 2;
+						}
+						@media (max-width: 425px) {
+						}
+					}
+					&-title {
+						font-family: 'OpenSauceL', sans-serif;
+						font-size: clamp(0.625rem, 0.55rem + 0.375vw, 1rem);
+						font-weight: 300;
+						text-align: center;
+						color: var(--text-accent-color);
+						margin-left: 20px;
+						@media (max-width: 800px) {
+							margin-left: 9px;
+						}
+						@media (max-width: 425px) {
+						}
+					}
+					&:nth-of-type(1) {
+						margin-left: 40px;
+						@media (max-width: 800px) {
+							margin-left: 20px;
+						}
+						@media (max-width: 425px) {
+							margin-left: 12px;
+						}
+					}
+					&:nth-of-type(3) {
+						margin-right: 40px;
+						@media (max-width: 800px) {
+							margin-right: 20px;
+						}
+						@media (max-width: 425px) {
+							margin-right: 12px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.cards-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: calc(var(--pad-desk) / 2);
+		margin: calc(40px + 8vh) var(--pad-desk) 4vh var(--pad-desk);
+		@media (max-width: 425px) {
+			gap: calc(var(--pad-mob) / 2);
+			margin: calc(40px + 6vh) var(--pad-mob) 6vh var(--pad-mob);
+		}
+		@media (max-width: 340px) {
+			margin: calc(40px + 5vh) var(--pad-mob) 3vh var(--pad-mob);
+		}
+	}
+}

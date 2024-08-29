@@ -1,0 +1,48 @@
+.error-page {
+	display: flex;
+	flex: 1 1;
+	justify-content: center;
+	background-image: url('../../assets//argentbank-cardL.png');
+}
+.error {
+	text-align: center;
+	margin: 25vh auto 5vh auto;
+	@media (max-width: 393px) {
+		margin: 25vh var(--pad-mob) 10vh var(--pad-mob);
+	}
+	.title-error {
+		font-family: 'LexendVar', sans-serif;
+		font-size: clamp(8.4375rem, 6.925rem + 7.5625vw, 16rem);
+	}
+	.text-error {
+		font-family: 'OpenSauceL', sans-serif;
+		margin-top: 2rem;
+		font-size: clamp(1.125rem, 1.05rem + 0.375vw, 1.5rem);
+		&-subtitle {
+			font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+		}
+	}
+	.button-404 {
+		font-family: 'OpenSauceL', sans-serif;
+		font-size: clamp(0.875rem, 0.85rem + 0.125vw, 1rem);
+		cursor: pointer;
+		margin-top: 30px;
+		padding: 9px 18px;
+		box-shadow: none;
+		border-radius: 4px;
+		color: var(--text-color);
+		font-size: 16px;
+		background: transparent;
+		border-style: solid;
+		border: none;
+		background: rgba(7, 9, 13, 0.2);
+		box-shadow: 0px 4px 50px #07090d, inset -6px 4px 30px rgba(255, 255, 253, 0.34);
+		backdrop-filter: blur(8px);
+		transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
+		&:hover {
+			background-color: rgba(7, 9, 13, 0.2);
+			box-shadow: 0px 4px 56.5px #07090d, inset -6px 4px 30.1px rgba(255, 255, 253, 0.473);
+			backdrop-filter: blur(10px);
+		}
+	}
+}

@@ -1,0 +1,181 @@
+.cards-container {
+	.card-content-wrapper {
+		background-color: var(--bg-accent-color);
+		border-top-left-radius: 6px;
+		border-bottom-left-radius: 6px;
+		border-bottom-right-radius: 8px;
+		border-top-right-radius: 8px;
+		max-width: 1300px;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		box-shadow: 0px 2px 15px rgba(7, 9, 13, 0.15);
+		@media (max-width: 1000px) {
+			width: 100%;
+		}
+		@media (max-width: 800px) {
+			display: inline-block;
+			height: 200px;
+			max-width: 608px;
+			box-shadow: none;
+		}
+		.text-wrapper {
+			position: relative;
+			z-index: 5;
+			padding: 22px;
+			overflow: hidden;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			@media (max-width: 800px) {
+				padding: 12px;
+				height: 100%;
+			}
+			.title-desc {
+				position: relative;
+				z-index: 6;
+				.card-title {
+					font-family: 'LexendVar', sans-serif;
+					font-weight: 500;
+					font-size: clamp(0.875rem, 0.7141rem + 0.6549vw, 1.5rem);
+					margin-bottom: 45px;
+					@media (max-width: 800px) {
+						margin-bottom: 20px;
+					}
+				}
+				.card-desc {
+					font-family: 'OpenSauceL', sans-serif;
+					font-size: clamp(0.75rem, 0.6857rem + 0.262vw, 1rem);
+					width: 80%;
+					.card-amount-subtext {
+						margin-top: 20px;
+					}
+				}
+			}
+			.btn-wrapper {
+				position: relative;
+				z-index: 6;
+				.cta {
+					cursor: pointer;
+					background: transparent;
+					color: var(--text-color);
+					border: 1px solid var(--bg-color);
+					border-radius: 4px;
+					padding: 11px 15px;
+					backdrop-filter: blur(3px);
+					font-family: 'OpenSauceL', sans-serif;
+					transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
+					&:hover {
+						background-color: rgba(7, 9, 13, 0.2);
+						box-shadow: 0px 4px 56.5px #07090d, inset -6px 4px 30.1px rgba(255, 255, 253, 0.34);
+						backdrop-filter: blur(8px);
+					}
+				}
+			}
+			.svg-blur {
+				position: absolute;
+				z-index: 4;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				background-image: url(../../assets/argentbank-cardS.png);
+				background-position: center;
+				background-size: contain;
+				opacity: 0.8;
+				mix-blend-mode: exclusion;
+				backdrop-filter: blur(10px);
+				border-top-left-radius: 6px;
+				border-bottom-left-radius: 6px;
+				@media (max-width: 800px) {
+					border-top-left-radius: 6px;
+					border-bottom-left-radius: 6px;
+					border-bottom-right-radius: 6px;
+					border-top-right-radius: 6px;
+				}
+			}
+			.svg-blur_left {
+				border-top-left-radius: 0px;
+				border-bottom-left-radius: 0px;
+				border-top-right-radius: 6px;
+				border-bottom-right-radius: 6px;
+				@media (max-width: 800px) {
+					border-top-left-radius: 6px;
+					border-bottom-left-radius: 6px;
+					border-bottom-right-radius: 6px;
+					border-top-right-radius: 6px;
+				}
+			}
+			.svg {
+				animation: svg-rotate-talk 8s linear infinite;
+				position: absolute;
+				z-index: 3;
+				top: 0;
+				right: -30%;
+				transform: rotate3d(-0.1, 1, 0, 180deg);
+				width: 100%;
+				height: 100%;
+			}
+			.norotate {
+				animation: svg-rotate 9s linear infinite;
+				transform: rotate3d(0, 1, 0, 180deg);
+				width: 135%;
+				height: 135%;
+				left: -35%;
+			}
+			.norotate_security {
+				animation: svg-rotate-sec 10s linear infinite;
+				transform: rotate3d(0, 0, 1, 25deg);
+			}
+		}
+		.img-wrapper {
+			img {
+				border-top-right-radius: 6px;
+				border-bottom-right-radius: 6px;
+				height: 100%;
+				width: 100%;
+			}
+			.img-left {
+				border-top-right-radius: 0px;
+				border-bottom-right-radius: 0px;
+				border-bottom-left-radius: 6px;
+				border-top-left-radius: 6px;
+			}
+			@media (max-width: 800px) {
+				display: none;
+			}
+		}
+	}
+	.wrapper-left {
+		border-top-left-radius: 8px;
+		border-bottom-left-radius: 8px;
+		border-bottom-right-radius: 6px;
+		border-top-right-radius: 6px;
+	}
+}
+
+@keyframes svg-rotate {
+	from {
+		transform: rotate3d(0, 1, 0.2, 0deg);
+	}
+	to {
+		transform: rotate3d(0, 1, 0.2, 360deg);
+	}
+}
+@keyframes svg-rotate-sec {
+	from {
+		transform: rotate3d(0, 1, 0.1, 0deg);
+	}
+	to {
+		transform: rotate3d(0, 1, 0.1, 360deg);
+	}
+}
+@keyframes svg-rotate-talk {
+	from {
+		transform: rotate3d(0, 1, 0.1, 0deg);
+	}
+	to {
+		transform: rotate3d(0, 1, 0.1, 360deg);
+	}
+}
